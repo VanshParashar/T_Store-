@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 import 'package:get/get_rx/get_rx.dart';
 import 'package:get_storage/get_storage.dart';
+import 'package:t_store/features/authentication/screens/login/login.dart';
 
 class OnBoardingController extends GetxController{
   static OnBoardingController get instance => Get.find();
@@ -19,7 +20,7 @@ class OnBoardingController extends GetxController{
 
   void nextPage(){
     if(currentPageIndex == 2){
-      // Get.to(LoginScreen);
+      Get.offAll(LoginScreen());
     }else{
       int page = currentPageIndex.value+1;
       pageController.jumpToPage(page);
