@@ -11,7 +11,6 @@ import 'package:t_store/utils/helpers/helper_functions.dart';
 
 import '../../../../common/widgets/login_signup/form_divider.dart';
 import '../../../../utils/constants/sizes.dart';
-import 'package:iconsax/iconsax.dart';
 
 import 'widgets/login_header.dart';
 

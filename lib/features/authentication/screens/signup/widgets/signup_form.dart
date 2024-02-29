@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:t_store/features/authentication/screens/signup/verify_email.dart';
 import 'package:t_store/utils/constants/colors.dart';
 import 'package:t_store/utils/constants/sizes.dart';
 import 'package:t_store/utils/constants/text_strings.dart';
@@ -16,7 +18,6 @@ class TSignupForm extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final dark = THelperFunctions.isDarkMode(context);
 
     return Form(
       child: Column(
@@ -86,7 +87,7 @@ class TSignupForm extends StatelessWidget {
           const SizedBox(height: TSizes.spaceBtwSections,),
           ///Signup Button
           SizedBox(width: double.infinity,
-            child: ElevatedButton(child: Text(TTexts.createAccount),onPressed: (){},),),
+            child: ElevatedButton(child: Text(TTexts.createAccount),onPressed: ()=> Get.to(()=>VerifyEmailScreen()),),),
 
         ],
       ),);
