@@ -4,8 +4,8 @@ import 'package:t_store/utils/constants/colors.dart';
 import 'package:t_store/utils/constants/text_strings.dart';
 import 'package:t_store/utils/helpers/helper_functions.dart';
 
-class TLoginDivider extends StatelessWidget {
-  const TLoginDivider({
+class TFormDivider extends StatelessWidget {
+  const TFormDivider({
     super.key,
     required this.dividerText,
   });
