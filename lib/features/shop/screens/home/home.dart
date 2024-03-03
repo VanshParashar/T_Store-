@@ -13,6 +13,7 @@ import 'package:t_store/utils/constants/sizes.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import '../../../../common/widgets/custom_shapes/containers/search_container.dart';
 import '../../../../common/widgets/images/t_rounded_image.dart';
+import '../../../../common/widgets/layouts/grid_layout.dart';
 import '../../../../utils/constants/image_strings.dart';
 import 'widget/home_appbar.dart';
 
@@ -21,7 +22,7 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -53,15 +54,21 @@ class HomeScreen extends StatelessWidget {
             ),
             Padding(
                 padding: EdgeInsets.all(TSizes.defaultSpace),
-                child:TPromoSlider(banners: [TImages.promoBanner1,TImages.promoBanner2,TImages.promoBanner3,],),
-            ),
+                child:Column(
+                  children: [
+                    TPromoSlider(banners: [TImages.promoBanner1,TImages.promoBanner2,TImages.promoBanner3,],),
+                    SizedBox(height: TSizes.spaceBtwSections,),
 
-            TProductCardVertical()
+                    TGridLayout(itemCount: 2,itemBuilder: (_,index) => const TProductCardVertical(),),
+                  ],
+                ),
+            ),
           ],
         ),
       ),
     );
   }
 }
+
 
 
